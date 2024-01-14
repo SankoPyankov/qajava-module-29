@@ -1,0 +1,74 @@
+1. "Run 1: PersonTest.testIsTeenager:52 expected [false] but found [true]" - Ошибка в реализации бизнес логики. 0 < 13 должно выводить false
+2. "Run 2: PersonTest.testIsTeenager:52 expected [false] but found [true]" - Ошибка в реализации бизнес логики. 7 < 13 должно выводить false
+3. "Run 3: PersonTest.testIsTeenager:52 expected [false] but found [true]" - Ошибка в реализации бизнес логики. 12 < 13 должно выводить false
+4. "Run 4: PersonTest.testIsTeenager:52 expected [false] but found [true]" - Ошибка в реализации бизнес логики. 19 входит в промежуток от 13 до 19, должно приходить true
+
+Ниже предстовлен вывод теста:
+
+ T E S T S
+-------------------------------------------------------
+Running PersonTest
+Before test
+2024/01/14 23:43:31
+Result: 0, true; Expected: false
+Result: 7, true; Expected: false
+Result: 12, true; Expected: false
+Result: 13, true; Expected: true
+Result: 14, true; Expected: true
+Result: 16, true; Expected: true
+Result: 18, true; Expected: true
+Result: 19, false; Expected: true
+Result: 20, false; Expected: false
+Result: 25, false; Expected: false
+Result: 99, false; Expected: false
+After test
+2024/01/14 23:43:31
+Tests run: 11, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.782 sec <<< FAILURE! - in PersonTest
+testIsTeenager(PersonTest)  Time elapsed: 0.031 sec  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+        at PersonTest.testIsTeenager(PersonTest.java:52)
+
+testIsTeenager(PersonTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+        at PersonTest.testIsTeenager(PersonTest.java:52)
+
+testIsTeenager(PersonTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+        at PersonTest.testIsTeenager(PersonTest.java:52)
+
+testIsTeenager(PersonTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+        at PersonTest.testIsTeenager(PersonTest.java:52)
+
+
+Results :
+
+Failed tests:
+PersonTest.testIsTeenager(PersonTest)
+  Run 1: PersonTest.testIsTeenager:52 expected [false] but found [true]
+  Run 2: PersonTest.testIsTeenager:52 expected [false] but found [true]
+  Run 3: PersonTest.testIsTeenager:52 expected [false] but found [true]
+  Run 4: PASS
+  Run 5: PASS
+  Run 6: PASS
+  Run 7: PASS
+  Run 8: PersonTest.testIsTeenager:52 expected [true] but found [false]
+  Run 9: PASS
+  Run 10: PASS
+  Run 11: PASS
+
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.063 s
+[INFO] Finished at: 2024-01-14T23:43:32+05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project qajava-module-29: There are test failures.
+[ERROR]
+[ERROR] Please refer to C:\skillfactory\qajava-module-29\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+
+
